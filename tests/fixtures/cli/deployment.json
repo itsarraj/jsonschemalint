@@ -1,0 +1,10 @@
+{
+  "service": "billing",
+  "replicas": 12,
+  "users": [
+    { "name": "ana", "email": "ana@example.com", "role": "admin"  },
+    { "name": "bo",  "email": "bo@example.com",  "role": "editor" },
+    { "name": "cy",  "email": 42, "role": "owner", "note": "temp" }
+  ],
+  "regoin": "eu-west-1"
+}

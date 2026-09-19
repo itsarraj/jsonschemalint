@@ -1,0 +1,27 @@
+[package]
+name = "jsonschemalint"
+version = "0.1.0"
+edition = "2021"
+description = "Validate a JSON document against a JSON Schema and report the exact path of every error"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/jsonschemalint"
+readme = "README.md"
+keywords = ["json-schema", "json", "validate", "lint", "schema"]
+categories = ["command-line-utilities"]
+
+[lib]
+name = "jsonschemalint"
+path = "src/lib.rs"
+
+[[bin]]
+name = "jsonschemalint"
+path = "src/main.rs"
+
+[dependencies]
+# preserve_order keeps object keys in document order, so reported errors come
+# out in the order the fields appear in the user's file.
+serde_json = { version = "1", features = ["preserve_order"] }
+regex = "1"
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
