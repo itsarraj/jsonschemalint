@@ -7,6 +7,12 @@ CLI for this is `ajv-cli`, which means installing Node and 26 npm packages to
 check one file, and which reports a missing-property or extra-property error
 against the *parent* object with the actual key buried in a `params` struct.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
